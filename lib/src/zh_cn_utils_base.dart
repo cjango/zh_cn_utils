@@ -7,18 +7,6 @@ class ZhCnUtils {
 
   void setStr(String str) => _str = str;
 
-  /// get chinese list from [_str]
-  List<String> getZhCnList() {
-    List<String> zhCnList = [];
-    var regexp = RegExp('($_zhCnRegStr+)');
-
-    regexp.allMatches(_str).forEach((_) {
-      zhCnList.add(_.group(0));
-    });
-
-    return zhCnList;
-  }
-
   /// get length that char is chinese in [_str]
   int getLenIsZhCnInStr() {
     int len = 0;
